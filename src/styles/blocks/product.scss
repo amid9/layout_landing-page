@@ -1,6 +1,13 @@
+@use '../variables' as *;
+
 .product {
   &__photo {
     width: 100%;
+    transition: transform $effectDuration;
+
+    &:hover {
+      transform: translateY(-6px);
+    }
   }
 
   &__title {

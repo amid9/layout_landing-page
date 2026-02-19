@@ -17,9 +17,27 @@
 
   &--phone {
     background-image: url(../images/icons/icon-phone.svg);
+    position: relative;
 
-    &:hover {
-      background-image: url(../../images/icons/cursor-mouse-mice.svg);
+    &::before {
+      content: attr(data-phone);
+      position: absolute;
+      right: calc(100% + 16px);
+      top: 50%;
+      transform: translateY(-50%);
+
+      opacity: 0;
+      transition: opacity 0.2s ease;
+
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+
+    &:hover::before {
+      opacity: 1;
     }
   }
 
@@ -27,11 +45,11 @@
     background-image: url(../images/icons/icon-burger-menu.svg);
 
     &:hover {
-      background-image: url(../../images/icons/cursor-mouse-mice.svg);
+      background-image: url(../images/icons/icon-burger-menu-hover.svg);
     }
   }
 
   &--close {
-    background-image: url(../images/icons/icon-close.png);
+    background-image: url(../images/icons/icon-close.svg);
   }
 }
