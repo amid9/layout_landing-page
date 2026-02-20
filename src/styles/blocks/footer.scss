@@ -2,6 +2,9 @@
 @use '../variables' as *;
 
 .footer {
+  position: relative;
+  z-index: 1;
+
   height: 320px;
   background-image: url(../images/footer/footer.png);
   background-size: cover;
