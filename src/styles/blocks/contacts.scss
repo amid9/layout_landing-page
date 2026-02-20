@@ -65,6 +65,11 @@
     line-height: 140%;
     color: $main-text-color;
     text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #5b5b5b;
+    }
   }
 }
 

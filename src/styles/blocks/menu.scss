@@ -40,3 +40,7 @@
     text-decoration: none;
   }
 }
+
+.page:has(.menu:target) {
+  overflow: hidden;
+}
